@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Brian Chen">
+<meta name="description" content="Week 6 JS Intro">
+<title>Week 6 | JavaScript Pay Calculator</title>
+
+</head>
+
+<body>
+   <!--we should have some sort of HTML in the file-->
+   <h1>Week 6 Pay Calculator | Javascript</h1>
+   
+   <!--IN-DOCUMENT JAVASCRIPT-->
+   <!--in-document: lives within the .html file, within appropriate tages(you saw this with CSS) and usally go after all of the intended HTML(body of bottom)-->
+   <script>
+
+    //STEP ONE - assign variable
+    var rate = prompt("Enter the rate paid per hour: ")
+    var hours = prompt("Enter hours worked for a week: ")
+    var tax = 0.2
+
+    //STEP TWO - data manipulation
+    var gross = (rate*hours)*2 
+    var taxAmt = gross*tax
+    var netPay = gross-taxAmt
+
+    //STEP THREE - display result(s)
+    alert(`Gross Pay is ${gross.toFixed(2)}  \nTax is ${taxAmt.toFixed(2)}  \nNet Pay is ${netPay.toFixed(2)}`)
+
+    //STEP FOUR - display result(s) in console
+    console.log(`Gross Pay is ${gross.toFixed(2)}`)
+    console.log(`Tax is ${taxAmt.toFixed(2)}`)
+    console.log(`Net Pay is ${netPay.toFixed(2)}`)
+
+   </script>
+
+</body>
+</html>
