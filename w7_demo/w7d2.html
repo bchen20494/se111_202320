@@ -176,7 +176,7 @@
         {
 
             me.style.color = "red"
-            console.log(`clicked reached`)
+            console.log(`clicked() reached`)
             
         }
 
@@ -185,19 +185,40 @@
         function greenclick(e) 
         {
             you.style.color = "green"
-            console.log(`greenclick reached`)
-        }
+            console.log(`greenclick() reached`)
+
+            var remainder = clickCount% 2
+
+            if(clickCount ===1)
+            {
+                you.style.color = "red"
+                you.style.backgroundColor = `black`
+
+            }
+            else if(clickCount === 0)
+            {
+                you.style.color = "green"
+                you.style.backgroundColor = `white`
+
+            }
+            else(clickCount ===1)
+            {
+                you.style.color = "blue"
+                you.style.backgroundColor = `black`
+
+            }
+        }//END OF greenCLICK()
 
         //selecting another button on the page
         var button = document.querySelector(`#submit`)
 
-        //demoing an anonymous function
-        button.addEventListener(`click`, function(event) 
+        //demoing an anonymous function - has no name, immediately writes the function definition - used when the function will not be reused outside of te one specific time
+        button.addEventListener(`click`, function(e) 
         {
             //checking out the event parameter 
             console.log(event)
         }//anonymouse function close
-        )
+        )//END of button.addEVENTListner()
     </script>
     
 </body>
