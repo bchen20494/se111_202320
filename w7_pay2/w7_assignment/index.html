@@ -141,13 +141,14 @@
 
             //add a 'click' event listener to the #submit HTML element (HINT: this is the first step in the <script> )
             //when the #submit button is clicked, the submitNow function should run
-            document.addEventListener(`click`, submitNow)
+            addEventListener(`#submit`, submitNow)
         
             function submitNow(e)
             {
 
                 /*NOTE FOR TESTING:
-                    *if written correctly, you will see an alert() with all info entered as well as processed!*/
+                *if written correctly, you will see an alert() with all info entered as well as processed!*/
+                alert(`${full}\nHOURS: ${hours}\nRATE: $${rate.toFixed(2)}\n\nGROSS PAY: $${gross.toFixed(2)}\nTAX AMOUNT: $${taxAmount.toFixed(2)}\nNET PAY: $${net.toFixed(2)}`)
 
             }
             
