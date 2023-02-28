@@ -17,7 +17,7 @@
    <!--each <input> must have an id that matches its corresponding label -->
    <!--each form element is separated by a break space (new line) -->
     <form>
-        <label for="first">First Name: </label>
+        <label for="first" >First Name: </label>
         <input type="text" id="first">
 
         <br>
@@ -68,7 +68,7 @@
 
     <script>
         //edit the below statement to select the #enter-button id from the HTML file
-        document.querySelector(enter-button).addEventListener(`click`, alertName)
+        document.querySelector(`#enter-button`).addEventListener(`click`, alertName)
         
         
 
@@ -120,7 +120,7 @@
             console.log(net.toFixed(2))
 
             //create a new variable called 'finalMessage' that holds the literal string value of the following, each value on a new line (use <br>): full name, hours worked*, hourly rate*   *--> rounded to the second decimal place 
-            var finalMessage = `${full} <br> ${hours.toFixed(2)} <br> ${rate.toFixed(2)}`
+            var finalMessage = `<br> Name: ${full} <br> Hours: ${hours.toFixed(2)} <br> Rate: ${rate.toFixed(2)}`
 
         
             //create a new var called 'info' and store the entire #info *HTML element* to it
@@ -130,11 +130,11 @@
             var num = document.querySelector(`#check`)
 
             //edit the innerHTML of the #info element (now the 'info' js var) to hold the value of 'finalMessage'
-            info.innerHTML += ` ${finalMessage}`
+            info.innerHTML += `${finalMessage}`
 
 
             //edit the innerHTML of the #check element (now the 'check' js var) to hold a literal string with the following values: gross pay, tax amount, net pay. All three values should be rounded to the second decimal place.  Use <br> to break onto a new line for each value
-            check.innerHTML += ` ${gross.toFixed(2)} <br> ${taxAmount.toFixed(2)} <br> ${nets.toFixed(2)}`
+            check.innerHTML += `<br> Gross: ${gross.toFixed(2)} <br> Tax Amount: ${taxAmount.toFixed(2)} <br> Net: ${net.toFixed(2)}`
 
 
             //add a 'click' event listener to the #submit HTML element (HINT: this is the first step in the <script> )
